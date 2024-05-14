@@ -1,0 +1,25 @@
+{
+  "manifest_version": 3,
+  "name": "Motivational-Quotes-Extension ",
+  "version": "1.0",
+  "description": "it fetches a random motivational quote image to help keep you inspired while you work or study",
+  "permissions": [
+    "tabs"
+  ],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["content.js"]
+    }
+  ],
+  "action": {
+    "default_popup": "popup.html",
+    "default_icon": {
+     
+      "128": "images/f.png"
+    }
+  }
+}
